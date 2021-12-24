@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShortUrl</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        margin: 0 auto;
+        padding-top: 80px;
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #e8cbc0, #636fa4);
+        color: white;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        margin-left: 500px;
+        width: 30%;
+      }
+
+      h1 {
+        font-weight: 400;
+        font-size: 130px;
+        text-transform: uppercase;
+      }
+
+      input {
+        margin: 10px auto;
+        display: block;
+        width: 100%;
+        height: 35px;
+        border-radius: 17px;
+        border: 0;
+        padding: 0 10px;
+      }
+
+      button {
+        float: right;
+        height: 35px;
+        border-radius: 17px;
+        border: 0;
+        padding: 0 10px;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <div>
+      <h1>ShortUrl</h1>
+      <form class="form" id="myForm">
+        <label for="longUrl"></label>
+        <input required type="url" name="longUrl" class="myInput" />
+        <button type="submit">Short</button>
+      </form>
+    </div>
+
+    <script>
+      const myForm = document.getElementById("myForm");
+      const myInput = document.querySelector(".myInput");
+
+      myForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const searchParams = new URLSearchParams();
+
+        searchParams.append("longUrl", formData.get("longUrl"));
+
+        await fetch("http://localhost:5000/", {
+          method: "POST",
+          body: searchParams,
+        })
+          .then(function (res) {
+            return res.text();
+          })
+          .then(function (text) {
+            myInput.value = text;
+          });
+      });
+    </script>
+  </body>
+</html>
