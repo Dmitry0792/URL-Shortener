@@ -1,12 +1,12 @@
 const shortid = require("shortid");
-const modDB = require("../modDB");
+const modDB = require("../models/modDB");
 
 module.exports = function(app, baseUrl) {
     app.get('/', (req, res) => {
         res.sendFile("/home/dmitry/23_12/myShortenerUrl/client/index.html");
     });
 
-    app.post("/", (req, res) => {
+    app.post("/createShortUrl", (req, res) => {
         const { longUrl } = req.body;
       
         const createShortUrl = async () => {

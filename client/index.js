@@ -9,7 +9,7 @@ const myForm = document.getElementById("myForm");
 
         searchParams.append("longUrl", formData.get("longUrl"));
 
-        await fetch("http://localhost:5001", {
+        await fetch("http://localhost:5001/createShortUrl", {
           method: "POST",
           body: searchParams,
         })
