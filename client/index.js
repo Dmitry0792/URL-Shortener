@@ -8,6 +8,7 @@ myForm.addEventListener("submit", async function (e) {
   const searchParams = new URLSearchParams();
 
   searchParams.append("longUrl", formData.get("longUrl"));
+  console.log(formData.get("longUrl"));
 
   await fetch("http://localhost:5001/createShortUrl", {
     method: "POST",

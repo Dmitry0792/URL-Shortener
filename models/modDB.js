@@ -1,19 +1,20 @@
+const config = require("../config");
 const mongoose = require("mongoose");
 
 const urlSchema = new mongoose.Schema({
   expireAt: {
     type: Date,
-    index: { expires: "15d" },
-    default: Date.now(),
+    index: { expires: config.expireAt },
+    default: Date.now()
   },
   longUrl: {
-    type: String,
+    type: String
   },
   shortUrl: {
-    type: String,
+    type: String
   },
   clicks: {
-    type: Number,
+    type: Number
   },
 });
 

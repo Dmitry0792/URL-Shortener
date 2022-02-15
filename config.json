@@ -2,6 +2,8 @@
     
     "PORT": 5001,
     "baseUrl": "http://localhost:5001/",
-    "mongoUrl": "mongodb://localhost:27017/use"
+    "mongoUrl": "mongodb://localhost:27017/use",
+    "expireAt": "15d",
+    "resolveJsonModule": true
 
 }
