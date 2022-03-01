@@ -10,7 +10,6 @@ const app = express();
 
 app.use(express.static("./client"));
 app.use(express.json({extended: false}));
-//app.use(express.urlencoded({ extended: false }));
 
 // Connect to db
 mongoose
