@@ -1,9 +1,10 @@
+
 body {
+  margin: 0;
   display: flex;
   justify-content: center;
-  padding-top: 80px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fff, #222);
+  background: linear-gradient(to bottom,#222, #fff);
   color: white;
 }
 
@@ -12,25 +13,37 @@ body {
 }
 
 .container {
-  margin-top: 70px;
+  margin: 170px 10px 0 10px;
   border-radius: 10px;
   border: 1px solid #333;
   text-align: center;
-  padding: 2px 10px;
   height: 500px;
-  width: 45%;
+  width: 1000px;
+  position: relative;
+
 }
 
 h1 {
   font-weight: 400;
   font-size: 130px;
   text-transform: uppercase;
+  margin-top: 10px;
+}
+.inputs {
+  width: 900px;
+  height: 400px;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
 }
 
 input {
-  margin: 10px auto;
-  margin-right: 10px;
-  width: 80%;
+  margin: 10px 10px 0 0;
+  width: 650px;
   height: 40px;
   border-radius: 10px;
   border: 0;
@@ -58,3 +71,120 @@ button:active {
 
 
 */
+
+
+/* ============ Media ===========*/
+
+@media (max-width: 1000px) {
+    .container {
+      margin-top: 120px;
+      width: 850px;
+    }
+
+    .inputs {
+      width: 750px;
+    }
+
+    h1 {
+      font-size: 100px;
+      margin-bottom: 100px;
+    }
+
+    input {
+      width: 550px;
+    }
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin-top: 100px;
+    width: 700px;
+  }
+
+  .inputs {
+    width: 650px;
+  }
+
+  h1 {
+    font-size: 90px;
+    margin-bottom: 150px;
+  }
+
+  input {
+    width: 450px;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    margin-top: 10px;
+    width: 550px;
+    height: 350px;
+  }
+
+  .inputs {
+    width: 500px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 65px;
+    margin-bottom: 35px;
+  }
+
+  input {
+    margin-right: 0;
+    width: 400px;
+    height: 30px;
+  }
+
+  button {
+    margin-left: 290px;
+    height: 30px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 370px;
+  }
+
+  .inputs {
+    width: 320px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  input {
+    width: 320px;
+  }
+
+  button {
+    margin-left: 210px;
+  }
+}
+
+@media (max-width: 355px) {
+  .container {
+    width: 310px;
+  }
+
+  .inputs {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  input {
+    width: 280px;
+  }
+
+  button {
+    margin-left: 170px;
+  }
+}
