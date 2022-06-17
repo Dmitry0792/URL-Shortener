@@ -34,7 +34,7 @@ copy.addEventListener("click", function () {
   document.execCommand("copy");
 
   copy.innerHTML = "copied";
-  setTimeout(function () {copy.innerHTML = "copy"}, 2000);
+  setTimeout(function () {copy.innerHTML = "copy"}, 1500);
 });
 
 
