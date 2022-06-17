@@ -1,10 +1,9 @@
-
 body {
   margin: 0;
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom,#222, #fff);
+  background: linear-gradient(to bottom, #222, #fff);
   color: #fff;
   font-family: "Titillium Web";
 }
@@ -28,17 +27,17 @@ h1 {
   font-size: 130px;
   text-transform: uppercase;
   line-height: 1.2;
-  color:#fff;
+  color: #fff;
   margin-top: 10px;
-  
+
 }
 
 .inputs {
   width: 900px;
   height: 400px;
   position: absolute;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
@@ -46,12 +45,15 @@ h1 {
 }
 
 .shortUrlNone {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
 }
 
 .shortUrlContent {
-  display: contents; 
-  
+  visibility: visible;
+  opacity: 1;
+
 }
 
 input {
@@ -61,7 +63,7 @@ input {
   border-radius: 10px;
   border: 0;
   padding: 0 10px;
-  font-size: 17px;
+  font-size: 16px;
   font-style: italic;
 }
 
@@ -71,13 +73,14 @@ button {
   width: 120px;
   border-radius: 10px;
   border: 0;
-  padding: 0 10px;  
+  padding: 0 10px;
   text-transform: uppercase;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 450;
   background-color: #33CC66;
   color: #fff;
   cursor: pointer;
+  transition: .1s;
 }
 
 button:active {
@@ -87,23 +90,23 @@ button:active {
 /* ============ Media ===========*/
 
 @media (max-width: 1000px) {
-    .container {
-      margin-top: 120px;
-      width: 850px;
-    }
+  .container {
+    margin-top: 120px;
+    width: 850px;
+  }
 
-    .inputs {
-      width: 750px;
-    }
+  .inputs {
+    width: 750px;
+  }
 
-    h1 {
-      font-size: 100px;
-      margin-bottom: 100px;
-    }
+  h1 {
+    font-size: 100px;
+    margin-bottom: 100px;
+  }
 
-    input {
-      width: 550px;
-    }
+  input {
+    width: 550px;
+  }
 }
 
 @media (max-width: 800px) {

@@ -1,5 +1,5 @@
 const myForm = document.getElementById("myForm");
-const copy = document.getElementById("copy")
+const copy = document.querySelector(".copy")
 const ret_shortUrl = document.querySelector(".ret_shortUrl");
 const shortUrlNone = document.querySelector(".shortUrlNone");
 
@@ -24,8 +24,8 @@ myForm.addEventListener("submit", async function (e) {
     .then(function (text) {
       ret_shortUrl.value = text;
     });
-    
-    shortUrlNone.classList.add("shortUrlContent");
+
+  shortUrlNone.classList.add("shortUrlContent");
 });
 
 copy.addEventListener("click", function () {
@@ -34,7 +34,7 @@ copy.addEventListener("click", function () {
   document.execCommand("copy");
 
   copy.innerHTML = "copied";
-  setTimeout(function () {copy.innerHTML = "copy"}, 1500);
+  setTimeout(function () { copy.innerHTML = "copy" }, 1200);
 });
 
 
