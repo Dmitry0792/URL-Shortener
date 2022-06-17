@@ -1,5 +1,9 @@
 const myForm = document.getElementById("myForm");
+const copy = document.getElementById("copy")
 const ret_shortUrl = document.querySelector(".ret_shortUrl");
+const shortUrlNone = document.querySelector(".shortUrlNone");
+
+
 
 myForm.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -20,9 +24,18 @@ myForm.addEventListener("submit", async function (e) {
     .then(function (text) {
       ret_shortUrl.value = text;
     });
+    
+    shortUrlNone.classList.add("shortUrlContent");
 });
 
-const onClick = () => {
-  navigator.clipboard.writeText(ret_shortUrl.value);
-  
-};
+copy.addEventListener("click", function () {
+
+  ret_shortUrl.select();
+  document.execCommand("copy");
+
+  copy.innerHTML = "copied";
+  setTimeout(function () {copy.innerHTML = "copy"}, 2000);
+});
+
+
+
