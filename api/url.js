@@ -20,7 +20,7 @@ module.exports = function (app, baseUrl, modDB) {
    *              longUrl:
    *                type: string 
    *            example:  
-   *              longUrl: http://localhost:5001/
+   *              longUrl: baseUrl
    *    responses: 
    *      '200':
    *         description: Created a pair longUrl --> shortUrl
