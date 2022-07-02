@@ -1,20 +1,22 @@
-ShortUrl
-Приложение для создания коротких URL адресов.
+#ShortUrl
+####Application for creating short URLs.
 
-Установка:
- 1. На сервере должен быть устновлен Docker-compose.
- 2. Клонируйте данный репозиторий на свой сервер командой https://github.com/Dmitry0792/URL-Shortener.gitю
- 3. В файле URL-Shortener/config.json в поле baseUrl замените localhost на ваш доменный адрес или ip адрес сервера.
- 4. В файле URL-Shortener/client/index.js также замените localhost на ваш доменный адрес или ip адрес сервера.
- 5. Теперь находясь в директории URL-Shortener запустите в терминале команду docker-compose build. 
- 6. После успешного завершения docker-compose build, запустите команду docker-compose up.
- 7. Приложение запузено и работает.) 
+####Installation:
+ * Docker-compose and git is required on a server.
+ * Clone this repository to your server with command: __"git clone https://github.com/Dmitry0792/URL-Shortener.git"__.
+ * In file _"URL-Shortener/config.json"_ in field _"baseUrl"_ replace _localhost_ with your domain address or server ip address.
+ * In file _"URL-Shortener/client/index.js"_, also replace "localhost" with your domain address or server ip address.
+ * Change directory to "URL-Shortener" and run command: __"docker-compose build"__.
+ * After successful completion run command: __"docker-compose up"__.
+ * Application is up and running.)
  
- Использование:
- 1. Перейдите по адресу на который установили приложение.
- 2. В поле Enter Url введите Url адрес который хотите сократиьть, и нажмите кнопку Short.
- 3. В появивщемся ниже поле будет короткий Url адрес, при переходе по которому вы будите перенаправдены на оригинальный адрес.
+####Usage:
+ * Go to the address where you installed the application.
+ * In the _"Enter Url"_ field, enter the Url address which you want to shorten, and click the _"Short"_ button.
+ * There will be a short Url address in the field that appears below, if you click on it, you will be redirected to the original address.
  
- Дополнительно:
-По умолчанию приложение хранит пару shortUrl-LongUrl 15 дней, в файле URL-Shortener/config.json в поле expireAt, вы можете изменить это на желаемый вами промежуток времению.
- 
+####Additionally:
+  By default, the application stores the Url pair for 15 days. You can define a different value as your wish. To do it just set a custom value in field _"expireAt"_ in configuration file: _"URL-Shortener/config.json"_.
+
+
+For questions, contact: _dmitry1vh@gmail.com_
